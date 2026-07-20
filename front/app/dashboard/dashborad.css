@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  background: #f5f7fb;
+  font-family: Inter, sans-serif;
+}
+
+.dashboard-page {
+  padding: 35px;
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 16px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .stat-card h2 {
+    font-size: 28px;
+  }
+
+  .charts {
+    grid-template-columns: 1fr; /* Stack charts on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-page {
+    padding: 12px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr; /* Stack stat cards on very small screens */
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+}
+
+.header {
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 34px;
+}
+
+.header p {
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+  transition: .3s;
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card h2 {
+  margin: 0;
+  font-size: 40px;
+  color: #2563eb;
+}
+
+.stat-card p {
+  margin-top: 10px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.charts {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.chart-card h2 {
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.stat-card:nth-child(1) {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+}
+
+.stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: white;
+}
+
+.stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: white;
+}
+
+.stat-card:nth-child(4) {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  color: white;
+}
+
+.stat-card:nth-child(5) {
+  background: linear-gradient(135deg, #ef4444, #fb7185);
+  color: white;
+}
+
+.stat-card p,
+.stat-card h2 {
+  color: white;
+}
